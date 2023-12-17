@@ -143,11 +143,14 @@ ul{
     
 }
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 670px) { 
+@media (max-width: 950px) { 
     .what-we-provide {
         display : flex ;
         flex-direction: column;
         align-items: center;
+        .w-info-box {
+            margin-bottom: 50px;
+        }
     }
 }
 
