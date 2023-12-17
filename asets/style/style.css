@@ -148,9 +148,13 @@ ul{
         display : flex ;
         flex-direction: column;
         align-items: center;
-        .w-info-box {
-            margin-bottom: 50px;
-        }
+
+    }
+}
+@media (max-width: 500px) {
+    .w-info-box {
+        margin-bottom: 50px;
+        margin-right: 20%;
     }
 }
 
