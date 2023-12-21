@@ -881,6 +881,33 @@ footer{
     font-size: 0.9rem;
 }
 
+/*  before after */
+
+.sliders {
+    display: flex;
+    justify-content: space-between;
+}
+.cd-image-container {
+    width: 250px;
+    display: inline-block;
+}
+.cd-image-container img , .cd-resize-img img {
+width: 250px;
+}
+
+@media(max-width:800px){ 
+    .sliders {
+        height: 1100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+}
+
+
+/*  */
+
 /* ==making-responsive========================================= */
 .menu-btn{
     display: none;
@@ -1112,6 +1139,7 @@ footer{
         height: 600px;
         border-radius: 30px;
     }
+   
     
 
 
