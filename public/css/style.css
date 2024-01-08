@@ -30,6 +30,8 @@ img {
 Main components 
 
 -------------------------------- */
+
+
 header {
   position: relative;
   height: 160px;
@@ -72,8 +74,8 @@ header h1 {
 }
 .cd-image-container > img {
   display: block;
-  /* height: auto; */
-  height: inherit;
+  height:320px;
+
 }
 
 .cd-image-label {

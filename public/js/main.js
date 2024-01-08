@@ -63,8 +63,8 @@ jQuery(document).ready(function($){
                 xPosition = dragElement.offset().left + dragWidth - e.pageX,
                 containerOffset = container.offset().left,
                 containerWidth = container.outerWidth(),
-                minLeft = containerOffset + 10,
-                maxLeft = containerOffset + containerWidth - dragWidth - 10;
+                minLeft = containerOffset - 15,
+                maxLeft = containerOffset + containerWidth - dragWidth + 15;
             
             dragElement.parents().on("mousemove vmousemove", function(e) {
                 if( !dragging) {
@@ -115,3 +115,6 @@ jQuery(document).ready(function($){
         }
     }
 });
+
+
+// select op

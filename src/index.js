@@ -2,21 +2,24 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('node:path'); 
 const nodemailer = require('nodemailer');
-const port = process.env.PORT || 5000 ; 
-
+const port = 3000 || process.env.PORT ; 
+const functions = require('firebase-functions');
 const app = express();
 
 // API midlwares
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+
+
+const public = path.join(__dirname , ".." , "public")
+app.use(express.static(path.join(public)));
 
 
 // API routs 
 
 app.get('/' , (req,res)=>{
-    res.sendFile(__dirname + '/public/index.html')
+    res.sendFile(public + '/index.html')
 })
 
 
@@ -26,7 +29,7 @@ app.get('/' , (req,res)=>{
         service: 'gmail',
         auth: {
         user: 'mohamadsabrialmasri@gmail.com', // حساب البريد الإلكتروني الخاص بك
-        pass: '.............' // كلمة المرور الخاصة بك
+        pass: 'mtsk pzuu tvbx cghc' // كلمة المرور الخاصة بك
         }
     });
 
@@ -52,7 +55,7 @@ app.get('/' , (req,res)=>{
         if (error) {
           return res.status(500).send(error.toString());
         }
-        res.status(200).sendFile(__dirname + '/public/succes.html');
+        res.status(200).sendFile(public + '/succes.html');
       });
   
     })
@@ -63,8 +66,8 @@ app.get('/' , (req,res)=>{
 
 
 
-app.listen(port , ()=>{
-    console.log(`server started at https://localhost:${port}`)
-})
+ app.listen(port , ()=>{
+     console.log(`server started at https://localhost:${port}`)
+ })
 
 
