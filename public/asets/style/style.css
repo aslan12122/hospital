@@ -1615,10 +1615,16 @@ footer {
   }
   .imgStyle,
   .slider {
-    height: 60vh;
+    height: 70vh;
   }
   .container1 {
     margin-top: 0px;
+  }
+  .menu-icon {
+    margin-top: 17px;
+  }
+  .logo img {
+    margin-top: 17px;
   }
 }
 
