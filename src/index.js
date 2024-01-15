@@ -24,8 +24,8 @@ app.get("/", (req, res) => {
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "reyhanhair35@gmail.com", // حساب البريد الإلكتروني الخاص بك
-    pass: "mtwr xosc ydjo altp", // كلمة المرور الخاصة بك
+    user: "info@reyhanhair.com", // حساب البريد الإلكتروني الخاص بك
+    pass: "kfnv laad vezw libt", // كلمة المرور الخاصة بك
   },
 });
 
@@ -36,8 +36,8 @@ app.post("/formPost", (req, res) => {
   // تكوين خيارات الرسالة
   const mailOptions = {
     from: email,
-    to: "reyhanhair35@gmail.com", // البريد الإلكتروني للمستلم
-    subject: "زبون",
+    to: "info@reyhanhair.com", // البريد الإلكتروني للمستلم
+    subject: `زبون جديد`,
     text: `الاسم: ${first}\n 
         الكنية ${last}\n
         البريد الإلكتروني: ${email}\n
